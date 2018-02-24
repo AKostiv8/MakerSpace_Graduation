@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AKostiv8/MakerSpace_Graduation#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "firebase": "^4.10.1"
   }
 }
