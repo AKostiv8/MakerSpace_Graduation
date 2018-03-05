@@ -5,7 +5,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const cors = require('cors');
+// const cors = require('cors');
 const firebase = require('firebase');
 const config = require('./config/database');
 firebase.initializeApp(config);
@@ -13,17 +13,18 @@ firebase.initializeApp(config);
 
 // Frontend directory
 
-app.use(cors({
-    origin: 'http://localhost:4200'
-}));
+// app.use(cors({
+//     origin: 'http://localhost:4200'
+// }));
 
+// Provide static directory for frontend
 app.use(express.static(__dirname + '/frontend/dist/'));
 
-// Connection to Angular 2 (index.html)
+// Connect server to Angular 2 Index.html
 app.get('*', (req, res) => {
-    res.send('Works');
-   // res.sendFile(path.join(__dirname + '/frontend/dist/index.html'));
+    res.sendFile(path.join(__dirname + '/client/frontend/index.html'));
 });
+
 
 app.listen(1111, () => {
     console.log('Port 1111 works');
