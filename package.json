@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/AKostiv8/MakerSpace_Graduation#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "firebase": "^4.10.1"
+    "firebase": "^4.10.1",
+    "firebaseauth": "^0.1.1"
   }
 }
